@@ -2,7 +2,7 @@
 
 ---
 
-- ### [Spring Boot 환경 설정](https://github.com/yeonjan/TIL/tree/main/Spring/inflearn/#-Spring-Boot-환경-설정)
+- ### [Spring Boot 환경 설정](#spring-boot-환경-설정)
 
 ---
 
