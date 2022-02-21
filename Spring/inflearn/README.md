@@ -72,6 +72,6 @@ dependencies {
 2. gradlew build
 3. cd build/libs
 4. java -jar hello-spring-0.0.1-SNAPSHOT.jar
-
+5. Ctrl + C -> 종료
 - 실행 X -> 2번에서 gradlew clean build
 - 인텔리제이의 포트 사용 종료
