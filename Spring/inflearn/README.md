@@ -56,13 +56,13 @@ dependencies {
 
 ### resources
 
-<img width="50%" src="https://user-images.githubusercontent.com/60567697/154985832-82eec992-f9c5-4ba3-aa91-a2b017ccd921.png"/>
+<img width="30%" src="https://user-images.githubusercontent.com/60567697/154985832-82eec992-f9c5-4ba3-aa91-a2b017ccd921.png"/>
 
 > resources의 하위 폴더 static에는 메인 페이지의 html이 존재, templates에는 ViewName에 해당하는 html이 존재
 
 ### 동작 환경 (템플릿 엔진 이용)
 
-<img width="90%" src="https://user-images.githubusercontent.com/60567697/154985123-08e0843a-e315-42e5-8fe8-0efafb6cd3a3.png"/>
+<img width="60%" src="https://user-images.githubusercontent.com/60567697/154985123-08e0843a-e315-42e5-8fe8-0efafb6cd3a3.png"/>
 
 > Controller에서 return 값으로 문자를 반환 -> viewResolver가 "resources:templates/ +{ViewName}+ .html"을 찾음
 
