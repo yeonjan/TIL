@@ -87,7 +87,7 @@ dependencies {
 
 ### 다음 사진과 같이 hello-static.html을 바로 불러온다.
 
- <img width="60%" src ="https://user-images.githubusercontent.com/60567697/155275673-328d787c-3ef9-47e5-a684-1ba0fa4da59d.png"/>
+ <img width="40%" src ="https://user-images.githubusercontent.com/60567697/155275673-328d787c-3ef9-47e5-a684-1ba0fa4da59d.png"/>
 
 ## 2. MVC
 
