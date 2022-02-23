@@ -3,6 +3,7 @@
 ---
 
 - #### [Spring Boot 환경 설정](#spring-boot-환경-설정)
+- #### [스프링 웹 개발 기초](#스프링-웹-개발-기초)
 
 # Spring Boot 환경 설정
 
@@ -75,3 +76,52 @@ dependencies {
 
 - 실행 X -> 2번에서 gradlew clean build
 - 인텔리제이의 포트 사용 종료
+
+# 스프링 웹 개발 기초
+
+## 1. 정적 컨텐츠
+
+> 정적 컨텐츠는 서버에서 하는 일 없이 파일을 바로 웹브라우저에 내려준다.
+
+ <img width="60%" src ="https://user-images.githubusercontent.com/60567697/155275377-f6f0625f-31e0-4392-bbc2-bd13691738ba.png"/>
+
+### 다음 사진과 같이 hello-static.html을 바로 불러온다.
+
+ <img width="60%" src ="https://user-images.githubusercontent.com/60567697/155275673-328d787c-3ef9-47e5-a684-1ba0fa4da59d.png"/>
+
+## 2. MVC
+
+> 관심사 분리가 필요 -> view, model, controller로 분리
+>
+> - view : 화면을 그림
+> - model, controller : 로직 및 내부적인 처리
+
+ <img width="60%" src ="https://user-images.githubusercontent.com/60567697/155276156-f8ace19e-2ad6-45ec-a25c-957f6eb29a23.png"/>
+
+### html을 그대로 넘겨주지 않고 서버에서 프로그래밍해 동적으로 변경해서 전달한다.
+
+## 3. API
+
+> @ResponseBody를 사용해 http(헤더와 바디)의 바디부에 return 내용을 직접 넣어준다.
+
+### - String 전달
+
+#### view없이 넘겨받은 내용은 그래도 보여준다.
+
+<img width="40%" src ="https://cdn.inflearn.com/public/files/posts/e9d3c5ef-6203-41c2-b442-34c9f11df529/blob"/><img width="40%" src ="https://cdn.inflearn.com/public/files/posts/e208d415-f85a-4efb-ba39-06b3de612b02/blob"/>
+
+### - 객체 전달
+
+#### json 방식으로 전달한다.
+
+<img width="40%" src ="https://cdn.inflearn.com/public/files/posts/bd6f7fdb-b7d6-4b76-9433-d39111cb3172/blob"/>
+
+### - @ResponseBody 사용원리
+
+<img width="60%" src ="https://user-images.githubusercontent.com/60567697/155277252-7826ab4d-5009-48dc-92b4-91085529c826.png"/>
+
+- HTTP의 BODY에 문자 내용을 직접 반환
+- 컨트롤러에 @ResponseBody가 있으면 viewResolver에 넘기지 않고 그대로 데이터를 넘기기 위해 httpMessageConverter가 동작
+- 문자처리 : StringConverter
+- 객체처리 : MappingJackson2HttpMessageConverter
+  - Jackson-> 객체를 json으로 변경하는 라이브러리
